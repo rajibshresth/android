@@ -5,9 +5,9 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
-import Adapter.ViewPagerAdapter;
-import Fragments.LoginActivity;
-import Fragments.RegisterActivity;
+import com.e.loginregister.Adapter.ViewPagerAdapter;
+import com.e.loginregister.Fragments.LoginActivity;
+import com.e.loginregister.Fragments.RegisterActivity;
 
 public class ViewPagerActivity extends AppCompatActivity  {
 

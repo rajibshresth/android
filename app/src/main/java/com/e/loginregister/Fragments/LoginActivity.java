@@ -1,4 +1,4 @@
-package Fragments;
+package com.e.loginregister.Fragments;
 
 
 import android.content.Context;
