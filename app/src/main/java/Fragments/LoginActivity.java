@@ -40,9 +40,9 @@ public class LoginActivity extends Fragment {
 
         View view = inflater.inflate(R.layout.activity_login, container, false);
 
-        user = view.findViewById(R.id.usrname);
-        pswd = view.findViewById(R.id.pass);
-        btnlogin = view.findViewById(R.id.btnlogin);
+        user = view.findViewById(R.id.txtEmail);
+        pswd = view.findViewById(R.id.txtpass);
+        btnlogin = view.findViewById(R.id.btnLogin);
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override

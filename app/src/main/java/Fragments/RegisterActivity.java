@@ -19,7 +19,7 @@ import com.e.loginregister.R;
  */
 public class RegisterActivity extends Fragment {
 
-    private EditText username,password;
+    private EditText username,email,password,number, address, usertype;
     private Button btnregister;
 //    private Context mcontext;
 
@@ -32,12 +32,16 @@ public class RegisterActivity extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        
+
         View view=inflater.inflate(R.layout.activity_register,container,false);
-        
-        username=view.findViewById(R.id.username);
-        password=view.findViewById(R.id.password);
-        btnregister=view.findViewById(R.id.btnregister);
+
+        username=view.findViewById(R.id.txtName);
+        email=view.findViewById(R.id.txtEmail);
+        password=view.findViewById(R.id.txtpass);
+        number=view.findViewById(R.id.txtphone);
+        address=view.findViewById(R.id.txtAddress);
+        usertype=view.findViewById(R.id.usertype);
+        btnregister=view.findViewById(R.id.btnRegis);
 
 
         btnregister.setOnClickListener(new View.OnClickListener() {
@@ -46,22 +50,22 @@ public class RegisterActivity extends Fragment {
                 Register();
             }
         });
-        
-        
+
+
         return view;
     }
 
-  public void Register(){
-    SharedPreferences sharedPreferences=this.getActivity().getSharedPreferences("User",Context.MODE_PRIVATE);
+    public void Register(){
+        SharedPreferences sharedPreferences=this.getActivity().getSharedPreferences("User",Context.MODE_PRIVATE);
 
-      SharedPreferences.Editor editor = sharedPreferences.edit();
+        SharedPreferences.Editor editor = sharedPreferences.edit();
 
-      editor.putString("username", username.getText().toString());
-      editor.putString("password", password.getText().toString());
+        editor.putString("username", username.getText().toString());
+        editor.putString("password", password.getText().toString());
 
-      editor.commit();
+        editor.commit();
 
-      Toast.makeText(this.getActivity(), "Registered", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this.getActivity(), "Registered", Toast.LENGTH_SHORT).show();
 
     }
 

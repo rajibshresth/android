@@ -6,41 +6,95 @@
     tools:context="Fragments.RegisterActivity">
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/loginscrn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Registration Form"
-        android:textSize="30sp"
+        android:layout_marginTop="50dp"
+        android:text="Registration"
+        android:textSize="25dp"
         android:textStyle="bold"
-        android:gravity="center"
-        />
-
-    <EditText
-        android:layout_width="match_parent"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/fstTxt"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:hint="Username"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:id="@+id/username"
-        />
-
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:text="Full Name"/>
     <EditText
-        android:layout_width="match_parent"
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Password"
+        android:layout_marginLeft="100dp"
+        android:ems="10"/>
+    <TextView
+        android:id="@+id/secTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:layout_marginLeft="100dp" />
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:ems="10" />
+    <TextView
+        android:id="@+id/etpswd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:layout_marginLeft="100dp" />
+    <EditText
+        android:id="@+id/txtPwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
         android:inputType="textPassword"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:id="@+id/password"
-        android:layout_margin="20dp"/>
-
-    <Button
-        android:layout_width="match_parent"
+        android:ems="10" />
+    <TextView
+        android:id="@+id/fourTxt"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Register"
-        android:id="@+id/btnregister"
-        android:textSize="20sp"
+        android:text="Phone Number"
+        android:layout_marginLeft="100dp" />
+    <EditText
+        android:id="@+id/txtphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:inputType="number"
+        android:ems="10" />
+    <TextView
+        android:id="@+id/fifthTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:layout_marginLeft="100dp" />
+    <EditText
+        android:id="@+id/txtAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:ems="10" />
+    <TextView
+        android:id="@+id/sixTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usertype"
+        android:layout_marginLeft="100dp" />
+    <EditText
+        android:id="@+id/usertype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:ems="10"
+        android:text="User"
         />
+    <Button
+        android:id="@+id/btnRegis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:text="Register" />
 </LinearLayout>
