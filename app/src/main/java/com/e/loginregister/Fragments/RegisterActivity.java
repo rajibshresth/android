@@ -61,11 +61,9 @@ public class RegisterActivity extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btnRegis){
-            Gson gson = new GsonBuilder()
-                    .setLenient().create();
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl("http://10.0.2.2:3001/")
-                    .addConverterFactory(GsonConverterFactory.create(gson))
+                    .addConverterFactory(GsonConverterFactory.create())
                     .build();
 
             signupAPI = retrofit.create(RegisAPI.class);

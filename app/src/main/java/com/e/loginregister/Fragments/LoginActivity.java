@@ -1,12 +1,15 @@
 package com.e.loginregister.Fragments;
 
 
+import android.app.Notification;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +24,9 @@ import com.e.loginregister.DashboardActivity;
 import com.e.loginregister.MainActivity;
 import com.e.loginregister.Model.TokenAuth;
 import com.e.loginregister.R;
+import com.e.loginregister.channel.notification;
+
+import java.nio.channels.Channel;
 
 import retrofit2.Retrofit;
 
@@ -31,6 +37,8 @@ public class LoginActivity extends Fragment implements View.OnClickListener{
 
     private EditText user, pswd;
     private Button btnlogin;
+
+    private NotificationManagerCompat notificationManagerCompat;
 
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
@@ -49,6 +57,11 @@ public class LoginActivity extends Fragment implements View.OnClickListener{
 
 
         View view = inflater.inflate(R.layout.activity_login, container, false);
+        notificationManagerCompat = NotificationManagerCompat.from(getActivity());
+
+        notification channel = new notification(getActivity());
+        channel.notification();
+
 
         user = view.findViewById(R.id.txtEmail);
         pswd = view.findViewById(R.id.txtpass);
@@ -86,9 +99,21 @@ public class LoginActivity extends Fragment implements View.OnClickListener{
             Intent intent = new Intent(getActivity(), DashboardActivity.class);
             startActivity(intent);
             getActivity().finish();
+            DispalyNotification();
         }
 
         }
+
+    private void DispalyNotification() {
+        Notification notification = new NotificationCompat.Builder(getActivity(), com.e.loginregister.channel.notification.Channel_1)
+                .setSmallIcon(R.drawable.ic_more_black_24dp)
+                .setContentTitle("Login Successful")
+                .setContentText("You Have been Logged In")
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                .build();
+        notificationManagerCompat.notify(1, notification);
+    }
+
     private void StrictMode() {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
