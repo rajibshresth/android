@@ -6,6 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".Fragments.RegisterActivity"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -16,6 +17,7 @@
         android:layout_marginTop="30dp"
         android:text="Registration"
         android:textSize="25dp"
+        android:textColor="#6D0D0D"
         android:textStyle="bold"
         android:layout_gravity="center"/>
     <TextView
@@ -24,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="20dp"
+        android:textColor="#6D0D0D"
         android:text="Full Name"/>
     <EditText
         android:id="@+id/txtName"
@@ -36,6 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email"
+        android:textColor="#6D0D0D"
         android:layout_marginLeft="50dp" />
     <EditText
         android:id="@+id/txtEmail"
@@ -48,6 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Password"
+        android:textColor="#6D0D0D"
         android:layout_marginLeft="50dp" />
     <EditText
         android:id="@+id/txtPwd"
@@ -61,6 +66,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Phone Number"
+        android:textColor="#6D0D0D"
         android:layout_marginLeft="50dp" />
     <EditText
         android:id="@+id/txtphone"
@@ -74,6 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Address"
+        android:textColor="#6D0D0D"
         android:layout_marginLeft="50dp" />
     <EditText
         android:id="@+id/txtAddress"
@@ -86,6 +93,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
+        android:textColor="#6D0D0D"
         android:text="Register" />
 </LinearLayout>
 </ScrollView>
