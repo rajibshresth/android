@@ -18,7 +18,6 @@
         <activity android:name=".FeedbackActivity" />
         <activity android:name=".UpdateProfileActivity" />
         <activity android:name=".BookingActivity" />
-        <activity android:name=".AdminDashboardActivity" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ViewPagerActivity">
