@@ -28,7 +28,8 @@ public class DashboardActivity extends AppCompatActivity {
         btnfeedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(DashboardActivity.this, )
+               Intent intent = new Intent(DashboardActivity.this,FeedbackActivity.class );
+               startActivity(intent);
             }
         });
     }

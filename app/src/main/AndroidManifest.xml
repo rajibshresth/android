@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".BookingActivity"></activity>
+        <activity android:name=".FeedbackActivity"></activity>
+        <activity android:name=".UpdateProfileActivity" />
+        <activity android:name=".BookingActivity" />
         <activity android:name=".AdminDashboardActivity" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".MainActivity" />
