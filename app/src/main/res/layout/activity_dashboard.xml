@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DashboardActivity"
-    android:orientation="vertical"
-    android:background="@drawable/background">
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Dashboard"
+        android:text="Dashboard"
         android:gravity="center"
         android:textSize="30sp"
         android:background="#615f5b"
@@ -22,7 +25,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:hint="Make an Appointment"
+        android:text="Book Appointment"
+        android:textColor="#6D0D0D"
         android:layout_gravity="center"
         android:textSize="30sp"
         />
@@ -32,9 +36,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:hint="Update Profile"
+        android:text="Update Profile"
         android:layout_gravity="center"
         android:textSize="30sp"
+        android:textColor="#6D0D0D"
         />
 
     <Button
@@ -42,10 +47,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:hint="Give Feedback"
+        android:text="Give Feedback"
         android:layout_gravity="center"
         android:textSize="30sp"
+        android:textColor="#6D0D0D"
         />
 
 
 </LinearLayout>
+</ScrollView>

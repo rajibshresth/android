@@ -10,7 +10,6 @@ import android.os.StrictMode;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,17 +17,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.e.loginregister.AdminDashboardActivity;
 import com.e.loginregister.BLL.LoginBLL;
 import com.e.loginregister.DashboardActivity;
-import com.e.loginregister.MainActivity;
 import com.e.loginregister.Model.TokenAuth;
 import com.e.loginregister.R;
 import com.e.loginregister.channel.notification;
-
-import java.nio.channels.Channel;
-
-import retrofit2.Retrofit;
 
 /**
  * A simple {@link Fragment} subclass.

@@ -7,13 +7,13 @@ import com.e.loginregister.Model.UserProfile;
 import retrofit2.Call;
 import retrofit2.http.*;
 
+import java.util.Date;
 import java.util.List;
 
 public interface RegisAPI {
 
-    @FormUrlEncoded
     @POST("Signup")
-    Call<String> useradd(@Field("fullname") String name,@Field("email") String email,@Field("password") String pass,@Field("phonenumber") String phonenumber,@Field("address") String address,@Field("usertype") String usertype);
+    Call<Void> useradd(@Body UserProfile userProfile);
 
     @GET("users")
     Call<List<RegisModel>> getUser();
@@ -29,7 +29,17 @@ public interface RegisAPI {
     @FormUrlEncoded
     @POST("/feedback")
     Call<String> feedback(
-            @Field("name")String name,
-            @Field("email")String email,
-            @Field("message")String message);
+                    @Field("name")String name,
+                    @Field("email")String email,
+                    @Field("message")String message);
+
+    @FormUrlEncoded
+    @POST("/appointment")
+    Call<String> appointment(
+            @Field("fullname")String name,
+            @Field("date") String date,
+            @Field("time")String time,
+            @Field("phonenumber")String phonenumber,
+            @Field("admin")String admin,
+            @Field("address")String address);
 }

@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.e.loginregister.API.RegisAPI;
+import com.e.loginregister.Model.UserProfile;
 import com.e.loginregister.R;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -28,11 +29,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class RegisterActivity extends Fragment implements View.OnClickListener {
 
-    private EditText fullname,email,password,phonenumber, address;
-    private String usertype;
+    private EditText fullname,email,password,phonenumber, address, usertype;
+
     private Button btnregister;
     RegisAPI signupAPI;
-//    private Context mcontext;
+    private Context mcontext;
 
     public RegisterActivity() {
         // Required empty public constructor
@@ -51,6 +52,7 @@ public class RegisterActivity extends Fragment implements View.OnClickListener {
         password=view.findViewById(R.id.txtpass);
         phonenumber=view.findViewById(R.id.txtphone);
         address=view.findViewById(R.id.txtAddress);
+        usertype=view.findViewById(R.id.txtUsertype);
         btnregister=view.findViewById(R.id.btnRegis);
 
         btnregister.setOnClickListener(this);
@@ -61,23 +63,29 @@ public class RegisterActivity extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btnRegis){
+
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl("http://10.0.2.2:3001/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 
             signupAPI = retrofit.create(RegisAPI.class);
-            String userType="User";
-            Call<String> UserCall = signupAPI.useradd(fullname.getText().toString(),email.getText().toString(),password.getText().toString(),phonenumber.getText().toString(),address.getText().toString(),userType);
 
-            UserCall.enqueue(new Callback<String>() {
+            UserProfile userProfile = new UserProfile(
+                    fullname.getText().toString(),email.getText().toString(),
+                    password.getText().toString(),phonenumber.getText().toString(),
+                    address.getText().toString(),usertype.getText().toString());
+
+            Call<Void> usercall = signupAPI.useradd(userProfile);
+
+            usercall.enqueue(new Callback<Void>() {
                 @Override
-                public void onResponse(Call<String> call, Response<String> response) {
+                public void onResponse(Call<Void> call, Response<Void> response) {
                     Toast.makeText(getActivity(), "Registered Successfully", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
-                public void onFailure(Call<String> call, Throwable t) {
+                public void onFailure(Call<Void> call, Throwable t) {
                     Toast.makeText(getActivity(), "Error" +t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                 }
             });

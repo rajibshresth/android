@@ -1,6 +1,7 @@
 <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -15,6 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Login"
+        android:textColor="#6D0D0D"
         android:textSize="25dp"
         android:textStyle="bold"
         android:layout_gravity="center"/>
@@ -24,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="20dp"
+        android:textColor="#6D0D0D"
         android:text="Email"/>
     <EditText
         android:id="@+id/txtEmail"
@@ -36,6 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Password"
+        android:textColor="#6D0D0D"
         android:layout_marginLeft="50dp" />
     <EditText
         android:id="@+id/txtpass"
@@ -48,6 +52,7 @@
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#6D0D0D"
         android:layout_marginLeft="50dp"
         android:text="Login" />
 </LinearLayout>

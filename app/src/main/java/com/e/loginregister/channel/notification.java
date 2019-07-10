@@ -10,7 +10,7 @@ public class notification {
     Context context;
     public final static String Channel_1 = "Channel1";
     public final static String Channel_2 = "Channel2";
-
+    public final static String Channel_3 = "Channel3";
     //    Constructor
     public notification(Context context) {
         this.context = context;
@@ -31,10 +31,17 @@ public class notification {
                     NotificationManager.IMPORTANCE_HIGH
             );
             channel2.setDescription("This is chanel 2");
+            NotificationChannel channel3 = new NotificationChannel(
+                    Channel_3,
+                    "Channel 3",
+                    NotificationManager.IMPORTANCE_HIGH
+            );
+            channel2.setDescription("This is chanel 3");
 
             NotificationManager manager = context.getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel1);
             manager.createNotificationChannel(channel2);
+            manager.createNotificationChannel(channel3);
 
         }
 

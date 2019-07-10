@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@drawable/background"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -10,15 +10,15 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".FeedbackActivity">
-
+    tools:context=".BookingActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Contact Us "
+        android:text="Book Appointment"
         android:textSize="25dp"
+        android:textColor="#6D0D0D"
         android:textStyle="bold"
         android:layout_gravity="center"/>
     <TextView
@@ -26,9 +26,10 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="20dp"
+        android:textColor="#6D0D0D"
         android:text="Fullname"/>
     <EditText
-        android:id="@+id/txtFullname"
+        android:id="@+id/txtfullname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
@@ -36,10 +37,50 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:text="Date"
+        android:textColor="#6D0D0D"
         android:layout_marginLeft="50dp" />
     <EditText
-        android:id="@+id/txtmail"
+        android:id="@+id/txtdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:inputType="date"
+        android:ems="10" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#6D0D0D"
+        android:text="Time"
+        android:layout_marginLeft="50dp" />
+    <EditText
+        android:id="@+id/txttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:inputType="time"
+        android:ems="10" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PhoneNo"
+        android:layout_marginLeft="50dp"
+        android:textColor="#6D0D0D"/>
+    <EditText
+        android:id="@+id/txtnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:inputType="number"
+        android:ems="10" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee"
+        android:layout_marginLeft="50dp"
+        android:textColor="#6D0D0D"/>
+    <EditText
+        android:id="@+id/txtemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
@@ -47,20 +88,21 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Message"
+        android:text="Address"
+        android:textColor="#6D0D0D"
         android:layout_marginLeft="50dp" />
     <EditText
-        android:id="@+id/txtmsg"
+        android:id="@+id/txtaddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
-        android:inputType="textShortMessage"
         android:ems="10" />
     <Button
-        android:id="@+id/btnSend"
+        android:id="@+id/btnBook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
-        android:text="Send" />
+        android:textColor="#6D0D0D"
+        android:text="Book" />
 </LinearLayout>
 </ScrollView>
