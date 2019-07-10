@@ -1,15 +1,19 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<LinearLayout android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".Fragments.RegisterActivity">
+    tools:context=".Fragments.RegisterActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
         android:id="@+id/loginscrn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:text="Registration"
         android:textSize="25dp"
         android:textStyle="bold"
@@ -18,38 +22,38 @@
         android:id="@+id/fstTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="20dp"
         android:text="Full Name"/>
     <EditText
         android:id="@+id/txtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="50dp"
         android:ems="10"/>
     <TextView
         android:id="@+id/secTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email"
-        android:layout_marginLeft="100dp" />
+        android:layout_marginLeft="50dp" />
     <EditText
         android:id="@+id/txtEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="50dp"
         android:ems="10" />
     <TextView
         android:id="@+id/etpswd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Password"
-        android:layout_marginLeft="100dp" />
+        android:layout_marginLeft="50dp" />
     <EditText
         android:id="@+id/txtPwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="50dp"
         android:inputType="textPassword"
         android:ems="10" />
     <TextView
@@ -57,12 +61,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Phone Number"
-        android:layout_marginLeft="100dp" />
+        android:layout_marginLeft="50dp" />
     <EditText
         android:id="@+id/txtphone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="50dp"
         android:inputType="number"
         android:ems="10" />
     <TextView
@@ -70,17 +74,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Address"
-        android:layout_marginLeft="100dp" />
+        android:layout_marginLeft="50dp" />
     <EditText
         android:id="@+id/txtAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="50dp"
         android:ems="10" />
     <Button
         android:id="@+id/btnRegis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="50dp"
         android:text="Register" />
 </LinearLayout>
+</ScrollView>

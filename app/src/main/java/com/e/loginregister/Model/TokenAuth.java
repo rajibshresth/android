@@ -1,8 +1,14 @@
 package com.e.loginregister.Model;
 
 public class TokenAuth {
+
     private String token;
     private  RegisModel regisModel;
+
+    public TokenAuth(String token, RegisModel regisModel) {
+        this.token = token;
+        this.regisModel = regisModel;
+    }
 
     public String getToken() {
         return token;

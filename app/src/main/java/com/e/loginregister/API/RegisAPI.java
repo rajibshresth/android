@@ -11,7 +11,7 @@ import java.util.List;
 public interface RegisAPI {
 
     @FormUrlEncoded
-    @POST("register")
+    @POST("Signup")
     Call<String> useradd(@Field("fullname") String name,@Field("email") String email,@Field("password") String pass,@Field("phonenumber") String phonenumber,@Field("address") String address,@Field("usertype") String usertype);
 
     @GET("users")
@@ -19,5 +19,5 @@ public interface RegisAPI {
 
     @FormUrlEncoded
     @POST("login")
-    Call<TokenAuth> Login(@Field("email") String email, @Field("pass") String pass);
+    Call<TokenAuth> Login(@Field("email") String email, @Field("password") String pass);
 }
