@@ -2,6 +2,7 @@ package com.e.loginregister.API;
 
 import com.e.loginregister.Model.RegisModel;
 import com.e.loginregister.Model.TokenAuth;
+import com.e.loginregister.Model.UserProfile;
 
 import retrofit2.Call;
 import retrofit2.http.*;
@@ -20,4 +21,15 @@ public interface RegisAPI {
     @FormUrlEncoded
     @POST("login")
     Call<TokenAuth> Login(@Field("email") String email, @Field("password") String pass);
+
+
+    @PUT("/v1/user/{id}")
+    Call<Void> userUpdate(@Path("id") int id, @Body UserProfile userProfileModel);
+
+    @FormUrlEncoded
+    @POST("/feedback")
+    Call<String> feedback(
+            @Field("name")String name,
+            @Field("email")String email,
+            @Field("message")String message);
 }

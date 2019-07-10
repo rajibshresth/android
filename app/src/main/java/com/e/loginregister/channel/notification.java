@@ -9,6 +9,7 @@ public class notification {
 
     Context context;
     public final static String Channel_1 = "Channel1";
+    public final static String Channel_2 = "Channel2";
 
     //    Constructor
     public notification(Context context) {
@@ -24,9 +25,16 @@ public class notification {
             );
             channel1.setDescription("This is chanel 1");
 
-            ;
+            NotificationChannel channel2 = new NotificationChannel(
+                    Channel_2,
+                    "Channel 2",
+                    NotificationManager.IMPORTANCE_HIGH
+            );
+            channel2.setDescription("This is chanel 2");
+
             NotificationManager manager = context.getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel1);
+            manager.createNotificationChannel(channel2);
 
         }
 
