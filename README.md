@@ -23,6 +23,7 @@ and specify other details such as destination, date, time etc.
 -	Login
 -	Make appointment
 - Provide Feedback
+- Notification While Logging In, Booking Appointment, Providing Feedback.
 
 # Api Link
 
