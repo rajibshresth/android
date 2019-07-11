@@ -8,7 +8,7 @@ public class UserProfile {
     private String phonenumber;
     private String address;
 
-    public UserProfile(String fullname, String email, String password, String phonenumber, String address) {
+    public UserProfile(String s, String fullname, String email, String password, String phonenumber, String address) {
         this.fullname = fullname;
         this.email = email;
         this.password = password;

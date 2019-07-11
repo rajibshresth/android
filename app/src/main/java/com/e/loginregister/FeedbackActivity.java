@@ -3,11 +3,16 @@ package com.e.loginregister;
 import android.app.Notification;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -30,6 +35,7 @@ public class FeedbackActivity extends AppCompatActivity {
     private NotificationManagerCompat notificationManagerCompat;
 
     SharedPreferences preferences;
+    SensorManager sensorManager;
     SharedPreferences.Editor editor;
 
     private static final String BASE_URL = "http://10.0.2.2:3001/";
@@ -100,5 +106,41 @@ public class FeedbackActivity extends AppCompatActivity {
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
                 .build();
         notificationManagerCompat.notify(1, notification);
+    }
+    public void proximity()
+    {
+        sensorManager=(SensorManager)getSystemService(SENSOR_SERVICE);
+        Sensor sensor=sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+
+        if (sensor == null)
+        {
+            Toast.makeText(this, "No sensor detected", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Toast.makeText(this, "Sensor Kicking in .....", Toast.LENGTH_SHORT).show();
+        }
+
+        SensorEventListener proximityListener=new SensorEventListener() {
+            @Override
+            public void onSensorChanged(SensorEvent event) {
+                WindowManager.LayoutParams params = FeedbackActivity.this.getWindow().getAttributes();
+                if (event.sensor.getType() == Sensor.TYPE_PROXIMITY) {
+                    if (event.values[0] == 0) {
+                        params.flags = WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
+                        params.screenBrightness = 0;
+                        getWindow().setAttributes(params);
+                    } else {
+                        params.flags = WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
+                        params.screenBrightness = -1f;
+                        getWindow().setAttributes(params);
+                    }
+                }
+            }
+            @Override
+            public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
+            }
+        };
+        sensorManager.registerListener(proximityListener,sensor, SensorManager.SENSOR_DELAY_FASTEST);
     }
 }

@@ -84,8 +84,8 @@ public class LoginActivity extends Fragment implements View.OnClickListener{
             editor = preferences.edit();
 
             editor.putString("token", userData.getToken());
-            //editor.putString("uid", userData.getRegisModel().get_id());
-            Toast.makeText(getActivity(),"User id:" + userData.getToken(),Toast.LENGTH_SHORT).show();
+            editor.putString("uid", userData.getRegisModel().get_id());
+            Toast.makeText(getActivity(),"User id:" + userData.get (),Toast.LENGTH_SHORT).show();
 
             editor.commit();
 

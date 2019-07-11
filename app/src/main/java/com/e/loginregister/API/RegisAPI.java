@@ -42,4 +42,18 @@ public interface RegisAPI {
             @Field("phonenumber")String phonenumber,
             @Field("admin")String admin,
             @Field("address")String address);
+
+    @GET("getUserById/{id}")
+    Call<RegisModel> loadprofile(@Path("id") String id);
+    @FormUrlEncoded
+    @PUT("/UserUpdateAndroid")
+    Call<String> updatedetail(
+        @Field("_id") String uid,
+        @Field("fullname") String fullname,
+        @Field("email") String email,
+        @Field ("password") String password,
+        @Field("phonenumber") String phonenumber,
+        @Field("address") String address
+        );
+
 }

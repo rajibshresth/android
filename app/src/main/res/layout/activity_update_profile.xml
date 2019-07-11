@@ -92,11 +92,11 @@
         android:layout_marginLeft="50dp"
         android:ems="10" />
     <Button
-        android:id="@+id/btnRegis"
+        android:id="@+id/btnupdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
-        android:text="Register"
+        android:text="Update"
         android:textColor="#6D0D0D"
         />
 
